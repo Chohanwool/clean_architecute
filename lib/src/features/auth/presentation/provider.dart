@@ -11,6 +11,8 @@ final authRepositoryProvider = Provider<AuthRepository>(
   (ref) => AuthRepositoryImpl(),
 );
 
+//-- Repository Provider
+
 //-- Usecase Provider
 final loginUserProvider = Provider<LoginUser>(
   (ref) => LoginUser(ref.read(authRepositoryProvider)),
@@ -26,3 +28,5 @@ final registerUserProvider = Provider<RegisterUser>(
 final loginViewModelProvider = AsyncNotifierProvider<LoginViewModel, bool>(
   LoginViewModel.new,
 );
+
+//-- ViewModel Provider
