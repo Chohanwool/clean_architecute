@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:clean_arch_2/src/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:clean_arch_2/src/features/auth/domain/repositories/auth_repository.dart';
 import 'package:clean_arch_2/src/features/auth/presentation/login_view_model.dart';
+import 'package:clean_arch_2/src/features/auth/presentation/register_view_model.dart';
 
 // Repository Provider
 final authRepositoryProvider = Provider<AuthRepository>(
@@ -28,5 +29,8 @@ final registerUserProvider = Provider<RegisterUser>(
 final loginViewModelProvider = AsyncNotifierProvider<LoginViewModel, bool>(
   LoginViewModel.new,
 );
+
+final registerViewModelProvider =
+    AsyncNotifierProvider<RegisterViewModel, bool>(RegisterViewModel.new);
 
 //-- ViewModel Provider

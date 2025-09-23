@@ -12,7 +12,8 @@ class LoginScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(loginViewModelProvider);
+    final loginState = ref.watch(loginViewModelProvider);
+    final registerState = ref.watch(registerViewModelProvider);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Login')),
@@ -36,16 +37,31 @@ class LoginScreen extends ConsumerWidget {
                     .read(loginViewModelProvider.notifier)
                     .login(email, password);
               },
-              child: state.isLoading
+              child: loginState.isLoading
                   ? const CircularProgressIndicator(color: Colors.white)
                   : const Text("Login"),
             ),
             const SizedBox(height: 20),
-            state.when(
+            ElevatedButton(
+              onPressed: () {
+                ref
+                    .read(registerViewModelProvider.notifier)
+                    .register(email, password);
+              },
+              child: const Text("Register"),
+            ),
+            loginState.when(
               data: (success) => success
                   ? const Text("✅ Login Success")
                   : const Text("❌ Login Failed"),
               loading: () => const Text("⏳ Logging in..."),
+              error: (e, _) => Text("Error: $e"),
+            ),
+            registerState.when(
+              data: (success) => success
+                  ? const Text("✅ Register Success")
+                  : const Text("❌ Register Failed"),
+              loading: () => const Text("⏳ Registering..."),
               error: (e, _) => Text("Error: $e"),
             ),
           ],
