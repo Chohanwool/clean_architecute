@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "776012108769",
+    "project_id": "fir-demo-proj-a9511",
+    "storage_bucket": "fir-demo-proj-a9511.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776012108769:android:d1dd009b6183fb3df838a0",
+        "android_client_info": {
+          "package_name": "com.example.clean_arch_2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776012108769-1ilkefvs1nveo8cbn4ro4oj3b4gvgtrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARe8gQ4vBw69qSEFBh0KJK2k9JHwfJU3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776012108769-1ilkefvs1nveo8cbn4ro4oj3b4gvgtrb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776012108769-fla38ieh7mispkd6oj8vee5sv5m73s0l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.palmcompany.firebasedemo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776012108769:android:7e1c726f9f967d7af838a0",
+        "android_client_info": {
+          "package_name": "com.palmcompany.firebasedemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776012108769-1ilkefvs1nveo8cbn4ro4oj3b4gvgtrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARe8gQ4vBw69qSEFBh0KJK2k9JHwfJU3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776012108769-1ilkefvs1nveo8cbn4ro4oj3b4gvgtrb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "776012108769-fla38ieh7mispkd6oj8vee5sv5m73s0l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.palmcompany.firebasedemo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
