@@ -6,7 +6,6 @@ import 'package:clean_arch_2/src/features/auth/data/repositories/auth_repository
 import 'package:clean_arch_2/src/features/auth/domain/repositories/auth_repository.dart';
 import 'package:clean_arch_2/src/features/auth/presentation/login_view_model.dart';
 import 'package:clean_arch_2/src/features/auth/presentation/register_view_model.dart';
-import 'package:flutter_riverpod/legacy.dart';
 
 // Repository Provider
 final authRepositoryProvider = Provider<AuthRepository>(
