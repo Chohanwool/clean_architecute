@@ -12,7 +12,7 @@ class AuthScreen extends ConsumerStatefulWidget {
 class _AuthScreenState extends ConsumerState<AuthScreen> {
   @override
   Widget build(BuildContext context) {
-    bool _isLoginState = ref.read(isLoginModeProvider);
+    bool isLoginState = ref.watch(isLoginModeProvider);
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primary,
@@ -56,19 +56,17 @@ class _AuthScreenState extends ConsumerState<AuthScreen> {
                               ).colorScheme.onPrimary,
                             ),
                             onPressed: () {},
-                            child: Text(_isLoginState ? 'Sign In' : 'Sign Up'),
+                            child: Text(isLoginState ? 'Sign In' : 'Sign Up'),
                           ),
                         ),
                         TextButton(
                           onPressed: () {
-                            setState(() {
-                              ref
-                                  .read(isLoginModeProvider.notifier)
-                                  .toggleLoginMode();
-                            });
+                            ref
+                                .read(isLoginModeProvider.notifier)
+                                .toggleLoginMode();
                           },
                           child: Text(
-                            _isLoginState
+                            isLoginState
                                 ? 'Create an account'
                                 : 'I already have an account',
                           ),
