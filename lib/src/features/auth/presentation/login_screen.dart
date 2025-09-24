@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:clean_arch_2/src/features/auth/presentation/viewModels/login_view_model.dart';
+import 'package:clean_arch_2/src/features/auth/presentation/viewModels/register_view_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'package:clean_arch_2/src/features/auth/presentation/provider.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});

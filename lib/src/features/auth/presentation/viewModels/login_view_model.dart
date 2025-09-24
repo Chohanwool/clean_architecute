@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:clean_arch_2/src/features/auth/presentation/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:clean_arch_2/src/features/auth/presentation/providers/login_user_provider.dart';
 
 /// Notifier
 class LoginViewModel extends AsyncNotifier<bool> {
@@ -31,3 +31,7 @@ class LoginViewModel extends AsyncNotifier<bool> {
     }
   }
 }
+
+final loginViewModelProvider = AsyncNotifierProvider<LoginViewModel, bool>(
+  LoginViewModel.new,
+);

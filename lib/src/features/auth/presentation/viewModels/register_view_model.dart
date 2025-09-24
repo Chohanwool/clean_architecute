@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:clean_arch_2/src/features/auth/presentation/provider.dart';
+import 'package:clean_arch_2/src/features/auth/presentation/providers/register_user_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class RegisterViewModel extends AsyncNotifier<bool> {
@@ -26,3 +26,6 @@ class RegisterViewModel extends AsyncNotifier<bool> {
     }
   }
 }
+
+final registerViewModelProvider =
+    AsyncNotifierProvider<RegisterViewModel, bool>(RegisterViewModel.new);
